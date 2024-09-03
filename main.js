@@ -75,12 +75,10 @@ document.querySelector('#app').innerHTML = `
 
     <div class="members hidden">
       <div>
-        <p>A member of</p>
-        <div class="members-line"></div>
+        <p>Kindergarten, nursery, Primary and secondary school</p>
       </div>
       <div>
-        <img src="./assets/body photos/ASCI.jpg" alt="ASCI" />
-        <img src="./assets/body photos/NAPPS.jpg" alt="NAPPS" />
+       <p>BECE, WAEC and NECO accredited
       </div>
     </div>
 
