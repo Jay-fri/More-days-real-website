@@ -1,11 +1,13 @@
 import '/css/admission-style.css'
 
 
+
 document.querySelector('#admission-page').innerHTML = `
 <nav class="hidden">
       <div class="schoollogo-div">
         <a href=""
-          ><img
+          ><img 
+            id ="logo"
             class="school-logo"
             src="./assets/header photos/WhatsApp Image 2024-07-07 at 08.18.32_c1384b16.jpg"
             alt="School Logo"
