@@ -1,4 +1,4 @@
-import "/css/academics-style.css"
+
 
 document.querySelector("#academicsPage").innerHTML=`
 <nav class="hidden">

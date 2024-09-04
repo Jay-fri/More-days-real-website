@@ -1,4 +1,4 @@
-import '/css/contact-style.css'
+
 
 document.querySelector('#contactPage').innerHTML =`
   <nav class="hidden">

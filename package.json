@@ -2,6 +2,8 @@
   "name": "more-days-private-school",
   "private": true,
   "version": "0.0.0",
+  "main": "main.js",
+  "homepage": "index.html",
   "type": "module",
   "scripts": {
     "dev": "vite",
