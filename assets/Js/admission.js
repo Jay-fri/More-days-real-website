@@ -11,6 +11,3 @@ burger.addEventListener('click', ()=>{
     document.querySelector('.links').style.transform='translateX(0%)';
   }
 })
-
-
-

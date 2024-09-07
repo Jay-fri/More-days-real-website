@@ -150,6 +150,7 @@ button:last-child:hover {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  scroll-margin-top: 250px;
 }
 
 .firstimage-div {
@@ -274,6 +275,9 @@ button:last-child:hover {
 }
 
 /*SECTION2*/
+#section2 {
+  scroll-margin-top: 250px;
+}
 .section2-header-div {
   display: flex;
   flex-direction: column;
@@ -366,6 +370,7 @@ button:last-child:hover {
 /*SECTION-3*/
 .section3 {
   margin-top: 15vh;
+  scroll-margin-top: 250px;
 }
 .section3-header {
   display: flex;
@@ -450,6 +455,7 @@ button:last-child:hover {
   margin-top: 6rem;
   padding-left: 5rem;
   padding-right: 5rem;
+  scroll-margin-top: 310px;
 }
 
 .section4-header-wrapper {

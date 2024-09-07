@@ -137,6 +137,7 @@ button:last-child:hover {
 /*SECTION 1*/
 .section1 {
   margin-top: 7rem;
+  scroll-margin-top: 250px;
 }
 
 .section1-wrapper {
@@ -199,6 +200,7 @@ button:last-child:hover {
   margin-left: auto;
   margin-right: auto;
   margin-top: 6rem;
+  scroll-margin-top: 250px;
 }
 
 .section2-header-wrapper {
@@ -276,87 +278,13 @@ button:last-child:hover {
   font-weight: 500;
 }
 
-/*SECTION 3*/
-.section3 {
-  margin-top: 7rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-}
-
-.section3-header-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.section3-header-div div:first-child {
-  background-color: #fff;
-  padding: 0.6rem;
-  border-radius: 5px;
-  width: fit-content;
-  border: 1px solid black;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.section3-header-div p:nth-child(2) {
-  font-size: 2rem;
-  font-weight: 600;
-  width: fit-content;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-}
-
-.section3-header-div p:nth-child(3) {
-  width: 62vw;
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-
-.section3-content-div-wrapper {
-  display: flex;
-  gap: 2rem;
-  margin-top: 3rem;
-  flex-wrap: wrap;
-}
-
-.section3-content-div {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border: 1px solid black;
-  width: fit-content;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 4px 4px black;
-}
-
-.section3-content-div svg {
-  width: 50px;
-  margin-top: -60px;
-  margin-left: -20px;
-}
-
-.section3-content-div p:nth-child(2) {
-  font-size: 1.5rem;
-  font-weight: 600;
-  width: 20rem;
-  margin-bottom: 0;
-}
-
-.section3-content-div p:nth-child(3) {
-  font-size: 0.9rem;
-  width: 20rem;
-}
-
 /*SECTION 4*/
 .section4 {
   width: fit-content;
   margin-top: 6rem;
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: 250px;
 }
 
 .section4-header-div {
