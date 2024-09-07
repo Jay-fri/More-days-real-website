@@ -560,10 +560,10 @@ footer {
   padding: 2rem 6rem;
 }
 
-.footer-wrapper1 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.footer-linkss {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
 }
 
 .footer-wrapper2 {
@@ -621,14 +621,13 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
-
   body {
     -ms-overflow-style: none;
     scrollbar-width: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-  
+
   body::-webkit-scrollbar {
     display: none;
   }
@@ -828,6 +827,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
+  }
+
+  .footer-linkss {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 100px;
   }
   footer {
     width: 85vw;

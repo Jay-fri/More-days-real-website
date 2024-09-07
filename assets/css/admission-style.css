@@ -305,10 +305,10 @@ footer {
   padding: 2rem 6rem;
 }
 
-.footer-wrapper1 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.footer-linkss {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
 }
 
 .footer-wrapper2 {
@@ -372,7 +372,7 @@ footer {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-  
+
   body::-webkit-scrollbar {
     display: none;
   }
@@ -475,6 +475,12 @@ footer {
   }
   .section2-header-div p:nth-child(3) {
     width: 90vw;
+  }
+
+  .footer-linkss {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 100px;
   }
 
   footer {

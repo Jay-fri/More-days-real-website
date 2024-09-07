@@ -26,15 +26,8 @@ body {
   padding: 0;
   font-family: outfit, sans-serif;
   background-color: var(--secondary-color);
-  /* -ms-overflow-style: none;
-  scrollbar-width: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden; */
 }
-
-/* body::-webkit-scrollbar {
-  display: none;
-} */
 
 :root {
   --main-color: green;
@@ -52,14 +45,14 @@ body {
 nav {
   display: flex;
   background-color: rgb(241, 249, 241);
-  width: 99%;
+  width: 99.7%;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
   padding-right: 0;
-  position: fixed;
-  top: 0.1rem;
-  left: 0.2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   z-index: 1000;
 }
@@ -146,6 +139,7 @@ button:last-child:hover {
 
 .section1 {
   margin-top: 7rem;
+  scroll-margin-top: 250px;
 }
 
 .section1-wrapper {
@@ -241,6 +235,7 @@ button:last-child:hover {
 .section2 {
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: 100px;
 }
 
 .section2-header-div {
@@ -353,6 +348,42 @@ button:last-child:hover {
   cursor: pointer;
 }
 
+/*SECTION3*/
+.section3 {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 5rem;
+  scroll-margin-top: 100px;
+}
+
+.section3-header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section3-header div:first-child {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.section3-header p:nth-child(2) {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.map {
+  border-radius: 10px;
+}
+
 /*FOOTER */
 footer {
   display: flex;
@@ -368,10 +399,10 @@ footer {
   padding: 2rem 6rem;
 }
 
-.footer-wrapper1 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.footer-linkss {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
 }
 
 .footer-wrapper2 {
@@ -436,7 +467,7 @@ footer {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-  
+
   body::-webkit-scrollbar {
     display: none;
   }
@@ -489,6 +520,11 @@ footer {
 }
 
 @media only screen and (max-width: 430px) {
+  nav {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
   .school-name {
     display: none;
   }
@@ -506,11 +542,10 @@ footer {
     width: 70vw;
   }
 
-  
   .section1-school-text {
     width: 65vw;
   }
-  
+
   .section1-text-div .section1-text div {
     height: fit-content;
     display: flex;
@@ -519,6 +554,16 @@ footer {
 
   .section2-header-div p:last-child {
     width: 70vw;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .footer-linkss {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 100px;
   }
 
   footer {
