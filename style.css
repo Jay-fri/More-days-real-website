@@ -1,5 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: outfit, sans-serif;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+:root {
+  --main-color: green;
+  --secondary-color: rgba(197, 235, 197, 0.75);
+  --button-color: rgb(174, 217, 174);
+  --extra-color: rgb(129, 189, 129);
+}
+
+/*PRELOADER*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(217, 226, 217);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #25b09b;
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 5s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.hiddepreloader {
+  display: none;
+}
+
 /*  OBSERVER ANIMATE ON SCROLL*/
 
 .hidden {
@@ -19,25 +83,6 @@
   .hidden {
     transition: none;
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: outfit, sans-serif;
-  background-color: var(--secondary-color);
-  overflow-x: hidden;
-}
-
-:root {
-  --main-color: green;
-  --secondary-color: rgba(197, 235, 197, 0.75);
-  --button-color: rgb(174, 217, 174);
-  --extra-color: rgb(129, 189, 129);
 }
 
 /*NAV BAR*/

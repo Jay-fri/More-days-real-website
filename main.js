@@ -1,5 +1,15 @@
+//PRELOADER
+window.addEventListener('load',function(){
+  this.setTimeout(function(){
+    document.getElementById('preloader').style.display='none'
+
+    document.getElementById('main-content').classList.remove('hidden');
+  }, 5000);
+ 
+});
 
 
+//MENU BAR
 
 const burger = document.querySelector('.drop-down-menu')
 
@@ -44,7 +54,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-//accordion
+//ACCORDION
 
 document.querySelectorAll('.rotatecheckbox').forEach(function(checkbox, index){
   checkbox.addEventListener('change', function(){
@@ -56,3 +66,6 @@ document.querySelectorAll('.rotatecheckbox').forEach(function(checkbox, index){
     }
   });
 });
+
+
+
