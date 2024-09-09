@@ -42,6 +42,10 @@ body {
   display: none;
 }
 
+#menu-text {
+  display: none;
+}
+
 nav {
   display: flex;
   background-color: rgb(241, 249, 241);
@@ -493,10 +497,16 @@ footer {
   .nav-buttons-contact button {
     font-size: 2rem;
     border: none;
+    border-radius: 0;
+  }
+
+  .nav-buttons-contact a:last-child {
+    border-radius: 0;
   }
 
   .drop-down-menu {
     display: flex;
+    flex-direction: column;
     margin-right: 1rem;
     background-color: white;
     height: 100%;
@@ -507,6 +517,18 @@ footer {
   .drop-down-icon {
     width: 40px;
     margin-right: 10px;
+  }
+  #menu-text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  #menu-text-close {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   footer {

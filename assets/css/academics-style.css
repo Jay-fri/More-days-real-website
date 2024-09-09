@@ -25,14 +25,7 @@ body {
   padding: 0;
   font-family: outfit, sans-serif;
   background-color: var(--secondary-color);
-  /* -ms-overflow-style: none;
-  scrollbar-width: 0;
-  scroll-behavior: smooth; */
 }
-
-/* body::-webkit-scrollbar {
-  display: none;
-} */
 
 :root {
   --main-color: green;
@@ -44,6 +37,10 @@ body {
 /*NAV BAR*/
 
 .drop-down-menu {
+  display: none;
+}
+
+#menu-text {
   display: none;
 }
 
@@ -327,213 +324,32 @@ button:last-child:hover {
   margin-top: 0;
 }
 
-.section3-content-wrapper {
-  margin-top: 20px;
-  padding: 0;
-  padding-top: 4rem;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: linear-gradient(
-    102.2deg,
-    rgb(109, 118, 150) 7.1%,
-    rgb(89, 72, 79) 14.7%,
-    rgb(69, 92, 79) 28%,
-    rgb(204, 85, 67) 43.4%,
-    rgb(237, 181, 121) 60.2%,
-    rgb(219, 230, 175) 76.8%
-  );
+.swiper {
+  width: 700px;
+  height: 600px;
+  padding: 50px;
 }
 
-.gallery {
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 700px;
+  height: 600px;
+  border: 3px solid green;
+  border-radius: 11px;
+}
+
+.swiper-slide img {
+  display: block;
   width: 100%;
-}
-.gallery-container {
-  align-items: center;
-  display: flex;
-  height: 400px;
-  margin: 0 auto;
-  max-width: 1000px;
-  position: relative;
+  height: 100%;
+  border-radius: 10px;
 }
 
-.gallery-item {
-  height: 250px;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.3s ease-in-out;
-  width: 360px;
-  z-index: 0;
-  border-radius: 15px;
-  background-size: contain;
-}
-
-.gallery-item-1,
-.gallery-item-2,
-.gallery-item-3,
-.gallery-item-4,
-.gallery-item-5,
-.gallery-item-6,
-.gallery-item-7,
-.gallery-item-8,
-.gallery-item-9,
-.gallery-item-10,
-.gallery-item-11,
-.gallery-item-12 {
-  opacity: 0;
-  transform: translateX(-50%);
-  left: 15%;
-}
-.gallery-item-13 {
-  left: 15%;
-  opacity: 0.4;
-  transform: translateX(-50%);
-}
-
-.gallery-item-14,
-.gallery-item-16 {
-  height: 300px;
-  opacity: 0.8;
-  width: 330px;
-  z-index: 1;
-}
-
-.gallery-item-14 {
-  left: 30%;
-  transform: translateX(-50%);
-}
-
-.gallery-item-15 {
-  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-  height: 350px;
-  opacity: 1;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 460px;
-  z-index: 2;
-}
-
-.gallery-item-16 {
-  left: 80%;
-  transform: translateX(-50%);
-}
-
-.gallery-item-17,
-.gallery-item-18,
-.gallery-item-19,
-.gallery-item-20,
-.gallery-item-21,
-.gallery-item-22,
-.gallery-item-23,
-.gallery-item-24,
-.gallery-item-25,
-.gallery-item-26,
-.gallery-item-27,
-.gallery-item-28 {
-  opacity: 0;
-  transform: translateX(-50%);
-  left: 90%;
-}
-.gallery-item-29 {
-  left: 85%;
-  opacity: 0.4;
-  transform: translateX(-50%);
-}
-
-.gallery-controls {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-  height: 100px;
-}
-
-.gallery-controls button {
-  background-color: transparent;
-  border: 0;
-  color: #000;
-  cursor: pointer;
-  font-size: 30px;
-  margin: 0 50px;
-  padding: 0 12px;
-  text-transform: capitalize;
-}
-
-.gallery-controls button:hover {
-  color: #000;
-}
-
-.gallery-controls-button:focus {
-  outline: none;
-}
-
-.gallery-controls-previous {
-  position: relative;
-}
-
-.gallery-controls-previous::before {
-  border: solid black;
-  border-width: 0 5px 5px 0;
-  content: "";
-  display: inline-block;
-  height: 5px;
-  left: -30px;
-  padding: 10px;
-  position: absolute;
-  top: 25%;
-  transform: rotate(135deg) translateY(-50%);
-  transition: left 0.15s ease-in-out;
-  width: 5px;
-}
-
-.gallery-controls-previous:hover::before {
-  left: -40px;
-}
-
-.gallery-controls-next {
-  position: relative;
-}
-
-.gallery-controls-next::before {
-  border: solid black;
-  border-width: 0 5px 5px 0;
-  content: "";
-  display: inline-block;
-  height: 5px;
-  padding: 10px;
-  position: absolute;
-  right: -25px;
-  top: 45%;
-  transform: rotate(-45deg) translateY(-50%);
-  transition: right 0.15s ease-in-out;
-  width: 5px;
-  color: #000;
-}
-
-.gallery-controls-next:hover::before {
-  right: -40px;
-}
-
-.gallery-nav {
-  bottom: -15px;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  position: absolute;
+.swiper-slide video {
+  display: block;
   width: 100%;
-}
-
-.gallery-nav li {
-  background: #ccc;
-  border-radius: 50%;
-  height: 10px;
-  margin: 0 16px;
-  width: 10px;
-}
-
-.gallery-nav li.gallery-item-selected {
-  background-color: #555;
+  height: 100%;
 }
 
 /*FOOTER */
@@ -612,6 +428,9 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
+  * {
+    box-sizing: border-box;
+  }
   body {
     -ms-overflow-style: none;
     scrollbar-width: 0;
@@ -624,9 +443,17 @@ footer {
   }
   nav {
     background-color: white;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .schoollogo-div {
+    border-radius: 0;
   }
   .links {
-    /* display: none; */
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -648,7 +475,7 @@ footer {
 
   .drop-down-menu {
     display: flex;
-    margin-right: 1rem;
+    flex-direction: column;
     background-color: white;
     height: 100%;
     z-index: 1000;
@@ -657,7 +484,20 @@ footer {
 
   .drop-down-icon {
     width: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
+  }
+
+  #menu-text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  #menu-text-close {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .section2-content-div {
@@ -674,16 +514,22 @@ footer {
     width: 100%;
   }
 
-  /* .section2-content-div div {
-    width: 50vw;
-  } */
-
   .section3-content-wrapper {
     background: none;
   }
 
+  .swiper {
+    width: 350px;
+    height: 400px;
+  }
+
+  .swiper-slide {
+    width: 350px;
+    height: 300px;
+  }
+
   footer {
-    width: 70vw;
+    width: 90vw;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -726,6 +572,11 @@ footer {
     margin-top: 0;
   }
 
+  .section3-header-div p:nth-child(3) {
+    width: 90vw;
+    font-size: 0.7rem;
+  }
+
   .footer-linkss {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -733,7 +584,7 @@ footer {
   }
 
   footer {
-    width: 85vw;
+    width: 95vw;
     padding: 1rem 1rem;
   }
 

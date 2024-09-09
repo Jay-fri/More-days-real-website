@@ -21,20 +21,17 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: outfit, sans-serif;
   background-color: var(--secondary-color);
-  /* -ms-overflow-style: none;
-  scrollbar-width: 0;
-  scroll-behavior: smooth;
-  overflow-x: hidden; */
+  overflow-x: hidden;
 }
-
-/* body::-webkit-scrollbar {
-  display: none;
-} */
 
 :root {
   --main-color: green;
@@ -49,10 +46,14 @@ body {
   display: none;
 }
 
+#menu-text {
+  display: none;
+}
+
 nav {
   display: flex;
   background-color: rgb(241, 249, 241);
-  width: 99%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
@@ -154,7 +155,7 @@ button:last-child:hover {
 }
 
 .firstimage-div {
-  width: 350px;
+  width: 500px;
   padding: 1rem;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -162,7 +163,7 @@ button:last-child:hover {
   margin-right: auto;
 }
 .firstimage-div img {
-  width: 350px;
+  width: 100%;
   height: 300px;
 }
 .section1-text-div {
@@ -175,10 +176,18 @@ button:last-child:hover {
 .section1-text h1 {
   font-size: 1rem;
   font-weight: 600;
-  border-bottom: 0.15rem solid black;
+  /* border-bottom: 0.15rem solid black; */
   padding-bottom: 0.1rem;
   width: fit-content;
   margin-bottom: 5px;
+}
+
+.section1-text h1::after {
+  content: "";
+  width: 280px;
+  height: 0.15rem;
+  background-color: #000;
+  display: flex;
 }
 
 .raleway-text {
@@ -244,6 +253,8 @@ button:last-child:hover {
   align-items: center;
   width: fit-content;
   flex-direction: column;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .members div:first-child {
@@ -402,16 +413,11 @@ button:last-child:hover {
   width: 50vw;
 }
 
-.swiper-scrollbar {
-  height: 0;
-  display: none;
-}
-
 .section3-div-wrapper {
   align-items: center;
   margin-top: 0;
   display: flex;
-  width: 100%;
+  width: 95vw;
   border-radius: 10px;
   background-color: var(--secondary-color);
   padding: 4rem 0;
@@ -627,6 +633,12 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+  }
   body {
     -ms-overflow-style: none;
     scrollbar-width: 0;
@@ -640,21 +652,63 @@ footer {
 
   nav {
     background-color: white;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .schoollogo-div {
+    border-radius: 0;
   }
   .links {
-    /* display: none; */
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     top: 0;
     right: 0;
     justify-content: space-evenly;
     background-color: white;
     transform: translateX(100%);
     transition: transform 0.5s;
+  }
+
+  .nav-buttons button {
+    font-size: 2rem;
+    border: none;
+  }
+
+  .drop-down-menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    background-color: white;
+    height: 100%;
+    z-index: 1000;
+    cursor: pointer;
+    width: auto;
+  }
+
+  .drop-down-icon {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  #menu-text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  #menu-text-close {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .counts {
@@ -665,8 +719,6 @@ footer {
     text-align: center;
     align-items: center;
     padding-left: 0;
-    /* margin-left: 15px;
-    margin-right: auto; */
   }
 
   .counts div span {
@@ -685,23 +737,17 @@ footer {
     align-items: center;
   }
 
-  .nav-buttons button {
-    font-size: 2rem;
-    border: none;
+  .firstimage-div {
+    width: 400px;
+    padding: 0.7rem;
+    overflow: hidden;
+    background: var(--main-color);
+    backdrop-filter: blur(5px);
+    --webkit-backdrop-filter: blur(5px);
   }
-
-  .drop-down-menu {
-    display: flex;
-    margin-right: 1rem;
-    background-color: white;
-    height: 100%;
-    z-index: 1000;
-    cursor: pointer;
-  }
-
-  .drop-down-icon {
-    width: 40px;
-    margin-right: 10px;
+  .firstimage-div img {
+    width: 100%;
+    border-radius: 0;
   }
 
   #accordion {
@@ -711,7 +757,7 @@ footer {
     padding: 0;
   }
   footer {
-    width: 70vw;
+    width: 95vw;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -723,6 +769,27 @@ footer {
 @media only screen and (max-width: 430px) {
   .school-name {
     display: none;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .firstimage-div {
+    width: 400px;
+    padding: 0.5rem;
+    overflow: hidden;
+    background: linear-gradient(
+      rgba(215, 215, 233, 0.582),
+      rgba(2, 88, 66, 0.589)
+    );
+    backdrop-filter: blur(5px);
+    --webkit-backdrop-filter: blur(5px);
+  }
+  .firstimage-div img {
+    width: 100%;
+    border-radius: 10px;
   }
   .section-1 {
     flex-direction: column;
@@ -770,8 +837,6 @@ footer {
     text-align: center;
     align-items: center;
     padding-left: 0;
-    /* margin-left: 15px;
-    margin-right: auto; */
   }
 
   .counts div span {
@@ -841,7 +906,7 @@ footer {
     row-gap: 100px;
   }
   footer {
-    width: 85vw;
+    width: 95vw;
     padding: 1rem 1rem;
   }
 

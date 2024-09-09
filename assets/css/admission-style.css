@@ -48,6 +48,10 @@ body {
   display: none;
 }
 
+#menu-text {
+  display: none;
+}
+
 nav {
   display: flex;
   background-color: rgb(241, 249, 241);
@@ -276,18 +280,18 @@ button:last-child:hover {
   background-color: #fff;
   border: 2px solid rgb(64, 63, 63);
   border-radius: 10px;
-  padding: 0 1rem;
+  padding: 1rem;
   height: 11rem;
   box-shadow: 3px 3px black;
 }
 
 .section2-content-text p:first-child {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .section2-content-text p:nth-child(2) {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 /*FOOTER */
@@ -378,6 +382,15 @@ footer {
   }
   nav {
     background-color: white;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .schoollogo-div {
+    border-radius: 0;
   }
   .links {
     position: absolute;
@@ -406,11 +419,27 @@ footer {
     height: 100%;
     z-index: 1000;
     cursor: pointer;
+    flex-direction: column;
+    gap: 0;
   }
 
   .drop-down-icon {
     width: 40px;
     margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  #menu-text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  #menu-text-close {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .section2-content .section2-content-number {
@@ -475,6 +504,11 @@ footer {
   }
   .section2-header-div p:nth-child(3) {
     width: 90vw;
+  }
+
+  .section2-content .section2-content-text {
+    width: 80vw;
+    margin-left: -68px;
   }
 
   .footer-linkss {

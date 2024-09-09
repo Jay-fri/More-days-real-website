@@ -41,6 +41,10 @@ body {
   display: none;
 }
 
+#menu-text {
+  display: none;
+}
+
 nav {
   display: flex;
   background-color: rgb(241, 249, 241);
@@ -422,9 +426,17 @@ footer {
   }
   nav {
     background-color: white;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .schoollogo-div {
+    border-radius: 0;
   }
   .links {
-    /* display: none; */
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -446,6 +458,7 @@ footer {
 
   .drop-down-menu {
     display: flex;
+    flex-direction: column;
     margin-right: 1rem;
     background-color: white;
     height: 100%;
@@ -456,6 +469,19 @@ footer {
   .drop-down-icon {
     width: 40px;
     margin-right: 10px;
+  }
+
+  #menu-text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  #menu-text-close {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .section3-content-div-wrapper {
@@ -475,12 +501,12 @@ footer {
     width: 42rem;
   }
 
-  .historyClick {
+  /* .historyClick {
     display: block;
     margin-bottom: 7px;
     margin-top: -7px;
     font-size: 1.5rem;
-  }
+  } */
 
   footer {
     width: 70vw;
@@ -569,7 +595,8 @@ footer {
   }
 
   .section4-header-div p:nth-child(3) {
-    width: 70vw;
+    width: 90vw;
+    font-size: 0.7rem;
   }
 
   .section4-content-wrapper img {

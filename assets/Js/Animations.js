@@ -5,7 +5,7 @@
 //SWIPER
 
 var swiper = new Swiper(".section3-div-wrapper", {
-  slidesPerView: 1.1,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
   pagination: {
