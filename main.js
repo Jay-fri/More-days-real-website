@@ -27,6 +27,9 @@ burger.addEventListener('click', ()=>{
 
 
 
+
+
+
 //Enable smooth scrolling for anchor tags
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -38,3 +41,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     })
   })
 })
+
+
+
+//accordion
+
+document.querySelectorAll('.rotatecheckbox').forEach(function(checkbox, index){
+  checkbox.addEventListener('change', function(){
+    const image = document.getElementById('accordImg' + (index + 1));
+    if(this.checked){
+      image.classList.add('rotated');
+    }else{
+      image.classList.remove('rotated');
+    }
+  });
+});

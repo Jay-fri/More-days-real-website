@@ -535,10 +535,12 @@ button:last-child:hover {
 
 #accordion li label span img {
   transition: all 0.4s;
+  border-radius: 5px;
 }
 
-#accordion li label span:hover img {
+.rotated {
   transform: rotate(90deg);
+  transition: transform 0.3s;
 }
 
 #accordion label + input[type="checkbox"] {
@@ -777,18 +779,18 @@ footer {
     overflow-x: hidden;
   }
   .firstimage-div {
-    width: 400px;
-    padding: 0.5rem;
-    overflow: hidden;
+    width: 100%;
+    padding: 0.6rem;
+    overflow: visible;
     background: linear-gradient(
-      rgba(215, 215, 233, 0.582),
-      rgba(2, 88, 66, 0.589)
+      rgba(227, 227, 243, 0.582),
+      rgba(26, 114, 92, 0.658)
     );
-    backdrop-filter: blur(5px);
-    --webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
   }
   .firstimage-div img {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
     border-radius: 10px;
   }
   .section-1 {
