@@ -85,7 +85,7 @@
     </section>
 
     <div id="section2" class="section2">
-      <div class="section2-header-div">
+      <div class="section2-header-div hidden">
         <div>Application Form</div>
         <p>Apply Now!!</p>
         <p>
@@ -94,7 +94,12 @@
         </p>
       </div>
 
-      <form action="https://formspree.io/f/meojdvdw" method="post" id="form">
+      <form
+        class="hidden"
+        action="https://formspree.io/f/meojdvdw"
+        method="post"
+        id="form"
+      >
         <div class="form-row">
           <div>
             <p>Parent Name</p>
@@ -164,12 +169,12 @@
     </div>
 
     <section id="section3" class="section3">
-      <div class="section3-header">
+      <div class="section3-header hidden">
         <div>Maps and direction</div>
         <p>Locate us and meet us in real time.</p>
       </div>
       <iframe
-        class="map"
+        class="map hidden"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.4152551010601!2d3.4232610398689634!3d6.811022525559402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bc19dbb218951%3A0x800fb51b75002f8!2sMORE-DAYS%20PRIVATE%20SCHOOL!5e0!3m2!1sen!2sng!4v1725720064405!5m2!1sen!2sng"
         width="600"
         height="450"

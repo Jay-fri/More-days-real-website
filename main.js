@@ -1,3 +1,4 @@
+
 //PRELOADER
 window.addEventListener('load',function(){
   this.setTimeout(function(){
@@ -9,12 +10,10 @@ window.addEventListener('load',function(){
 });
 
 
+
 //MENU BAR
 
 const burger = document.querySelector('.drop-down-menu')
-
-
-
 
 burger.addEventListener('click', ()=>{ 
   burger.classList.toggle("active");
