@@ -20,7 +20,7 @@ var swiper = new Swiper(".section3-div-wrapper", {
 
 
 //COUNTER
-let countOne =  setInterval(updatedOne);
+let countOne =  setInterval(updatedOne, 20);
 let uptoOne = 0;
 function updatedOne(){
   let count = document.getElementById("count1");
@@ -30,7 +30,7 @@ function updatedOne(){
   } 
 }
 
-let countTwo = setInterval(updatedTwo, 30);
+let countTwo = setInterval(updatedTwo, 50);
 let uptoTwo = 0;
 function updatedTwo(){
   let count = document.getElementById("count2")
@@ -40,7 +40,7 @@ function updatedTwo(){
   }
 }
 
-let countThree = setInterval(updateThree, 100);
+let countThree = setInterval(updateThree, 300);
 let uptoThree = 0;
 function updateThree(){
   let count = document.getElementById("count3");
