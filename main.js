@@ -10,6 +10,53 @@ window.addEventListener('load',function(){
 });
 
 
+//TYPING TEXT
+const text = ["Dreams Becomes Reality", "Ideas Ignites The Future", "Passions are Nutured", "Leaders of Tomorrow are Born"];
+const texts = ["young minds blossom", "creativity takes flight", "ideas ignite the future"];
+    let currentTextIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 150;   // Speed for typing
+    const backspaceSpeed = 75; // Speed for backspacing
+    const delayBetweenTexts = 1000; // Delay before switching to next text
+    const delayBeforeDelete = 1500; // Delay before starting to backspace a fully typed text
+
+    function typeEffect() {
+      const currentText = texts[currentTextIndex];
+      const typingElement = document.getElementById("typing");
+
+      // Handle typing and deleting
+      if (isDeleting) {
+        typingElement.innerHTML = currentText.substring(0, currentCharIndex - 1);
+        currentCharIndex--;
+      } else {
+        typingElement.innerHTML = currentText.substring(0, currentCharIndex + 1);
+        currentCharIndex++;
+      }
+
+      // If the text is fully typed and we are not deleting yet, pause and then start backspacing
+      if (!isDeleting && currentCharIndex === currentText.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          typeEffect();
+        }, delayBeforeDelete);
+      } 
+      // If the text is fully deleted, move to the next text
+      else if (isDeleting && currentCharIndex === 0) {
+        isDeleting = false;
+        currentTextIndex = (currentTextIndex + 1) % texts.length; // Loop back to first text after the last one
+        setTimeout(typeEffect, typingSpeed);
+      } 
+      // Continue typing or deleting
+      else {
+        setTimeout(typeEffect, isDeleting ? backspaceSpeed : typingSpeed);
+      }
+    }
+
+    // Start the typing effect when the page loads
+    window.onload = typeEffect;
+
+
 
 //MENU BAR
 

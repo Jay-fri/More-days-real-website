@@ -31,6 +31,22 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2000;
+  flex-direction: column;
+}
+
+.preloader p:first-child {
+  color: rgba(92, 91, 91, 0.075);
+  font-size: clamp(15vw, 8rem, 5rem);
+  font-weight: 900;
+  position: absolute;
+  text-align: center;
+  line-height: 95px;
+}
+
+.preloader p:last-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: gray;
 }
 .loader {
   width: 50px;
@@ -244,7 +260,20 @@ button:last-child:hover {
   margin-bottom: 10px;
 }
 
-.section1-text span {
+#container {
+  font-size: 2rem;
+}
+
+.typing-placeholder {
+  display: inline;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  text-wrap: wrap;
+  color: var(--extra-color);
+}
+
+.full-stop {
   color: var(--extra-color);
 }
 
@@ -323,6 +352,10 @@ button:last-child:hover {
   display: flex;
   gap: 2rem;
   margin-left: 1rem;
+}
+
+.members span {
+  color: rgb(252, 135, 56);
 }
 
 .members img {

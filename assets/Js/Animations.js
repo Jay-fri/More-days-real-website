@@ -45,7 +45,7 @@ let uptoThree = 0;
 function updateThree(){
   let count = document.getElementById("count3");
   count.innerHTML = ++uptoThree;
-  if (uptoThree === 20){
+  if (uptoThree === 30){
     clearInterval
     (countThree);
   }
