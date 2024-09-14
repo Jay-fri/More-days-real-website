@@ -294,7 +294,7 @@ button:last-child:hover {
   gap: 10vw;
 }
 
-#form .form-row div {
+#form .form-row label {
   display: flex;
   flex-direction: column;
 }
@@ -304,7 +304,7 @@ button:last-child:hover {
   font-weight: 500;
 }
 
-#form .form-row div input {
+#form .form-row label input {
   width: 250px;
   padding: 10px;
   font-size: 0.9rem;
@@ -313,7 +313,7 @@ button:last-child:hover {
   background-color: rgb(218, 255, 218);
 }
 
-#form .form-row div input::placeholder {
+#form .form-row label input::placeholder {
   font-size: 0.7rem;
 }
 
